@@ -2,11 +2,12 @@
   <remote name="yocto" fetch="https://git.yoctoproject.org/" />
   <remote name="github" fetch="https://github.com/" />
 
-  <default revision="scarthgap" sync-j="8" />
+  <default revision="wrynose" sync-j="8" />
 
   <project name="RF3-Systems/rpi-yocto-manifest" path="manifest" remote="github" />
 
   <project name="agherzan/meta-raspberrypi.git" path="sources/meta-raspberrypi" remote="github" />
+  <project name="sbabic/meta-swupdate.git" path="sources/meta-swupdate" remote="github" />
 
   <project name="poky" path="sources/poky" remote="yocto" />
 </manifest>
