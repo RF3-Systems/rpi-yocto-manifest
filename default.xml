@@ -1,13 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="yocto" fetch="https://git.yoctoproject.org/" />
-  <remote name="github" fetch="https://github.com/" />
+  <remote name="rf3"     fetch="git@github-rf3:RF3-Systems" />
+  <remote name="github"  fetch="https://github.com/" />
 
-  <default revision="wrynose" sync-j="8" />
+  <default remote="github" revision="wrynose" sync-j="8" sync-c="true" />
 
-  <project name="RF3-Systems/rpi-yocto-manifest" path="manifest" remote="github" />
+  <project name="rpi-yocto-manifest" path="manifest" remote="rf3" />
+  <project name="rpi-yocto-build-container" path="sources/yocto-build-container" remote="rf3" />
+  <project name="meta-rf3-distro" path="sources/meta-rf3-distro" remote="rf3" />
 
-  <project name="agherzan/meta-raspberrypi.git" path="sources/meta-raspberrypi" remote="github" />
-  <project name="sbabic/meta-swupdate.git" path="sources/meta-swupdate" remote="github" />
+  <project name="openembedded/bitbake.git" path="sources/bitbake" revision="2.18" />
+  <project name="openembedded/openembedded-core.git" path="sources/openembedded-core" />
+  <project name="openembedded/meta-openembedded.git" path="sources/meta-openembedded" />
+  <project name="agherzan/meta-raspberrypi.git" path="sources/meta-raspberrypi" />
 
-  <project name="poky" path="sources/poky" remote="yocto" />
+  <project name="sbabic/meta-swupdate.git" path="sources/meta-swupdate" />
 </manifest>
